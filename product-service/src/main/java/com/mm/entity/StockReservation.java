@@ -1,6 +1,6 @@
 package com.mm.entity;
 
-import com.mm.enums.StockStatus;
+import com.mm.enums.ReservationStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +11,6 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 @Builder
 public class StockReservation {
 
@@ -22,14 +21,19 @@ public class StockReservation {
     @Column(nullable = false, updatable = false)
     private UUID orderId;
 
-    @Column(nullable = false, updatable = false)
-    private UUID productId;
+    @JoinColumn(nullable = false, updatable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Product product;
 
     @Column(nullable = false)
     private Integer quantity;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private StockStatus status;
+    private ReservationStatus status;
 
+    public StockReservation setStatus(ReservationStatus status) {
+        this.status = status;
+        return this;
+    }
 }
