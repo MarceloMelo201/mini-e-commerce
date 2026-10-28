@@ -9,4 +9,16 @@ services:
     ports:
       - "5438:5432"
     tmpfs:
-        - /var/lib/postgresql/data
+      - /var/lib/postgresql/data
+
+  postgres-orders:
+    image: postgres:16
+    container_name: pg-orders
+    environment:
+      POSTGRES_DB: orders_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5439:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
