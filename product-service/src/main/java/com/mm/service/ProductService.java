@@ -48,7 +48,7 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true)
-    public ProductResponse getProductById(UUID productId) {
+    public ProductResponse findProductById(UUID productId) {
         Product result = productRepository.findById(productId).orElseThrow(ProductNotFoundEx::new);
         return mapper.toResponse(result);
     }
@@ -59,45 +59,4 @@ public class ProductService {
         return productRepository.findAll().stream().map(mapper::toResponse).toList();
     }
 
-
-    @Transactional
-    public StockResponse createReserve(UUID productId, StockRequest request) {
-        //verificar se o produto existe
-        Product product = productRepository.findByProductIdForUpdate(productId).orElseThrow(ProductNotFoundEx::new);
-
-        //verificar se tem estoque
-        int reservationQuantityStock = stockRepository.findAllByProduct_ProductIdAndStatus(productId, ReservationStatus.ACTIVE)
-                .stream()
-                .mapToInt(StockReservation::getQuantity)
-                .sum();
-
-        if (reservationQuantityStock + request.quantity() > product.getAvailableQuantity())
-            throw new InsufficientQuantityEx();
-
-        StockReservation reservation = StockReservation
-                .builder()
-                .orderId(request.orderId())
-                .product(product)
-                .quantity(request.quantity())
-                .status(ReservationStatus.ACTIVE)
-                .build();
-
-        BigDecimal totalPrice = product.getPrice().multiply(BigDecimal.valueOf(request.quantity()));
-
-        var result = stockRepository.saveAndFlush(reservation);
-
-        return new StockResponse(
-                result.getReservationId(),
-                result.getProduct().getProductId(),
-                result.getQuantity(),
-                totalPrice,
-                result.getStatus().toString()
-                );
-    }
-
-    @Transactional
-    public void releaseReservation(UUID reservationId) {
-        StockReservation reservation = stockRepository.findById(reservationId).orElseThrow(ReservationNotFoundEx::new);
-        stockRepository.save(reservation.setStatus(ReservationStatus.RELEASED));
-    }
 }
