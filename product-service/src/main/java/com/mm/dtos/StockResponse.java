@@ -7,6 +7,7 @@ public record StockResponse(
         UUID reservationId,
         UUID productId,
         Integer quantity,
+        BigDecimal unitPrice,
         BigDecimal totalPrice,
         String status
 ) {

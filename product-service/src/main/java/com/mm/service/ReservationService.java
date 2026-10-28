@@ -54,6 +54,7 @@ public class ReservationService {
                 result.getReservationId(),
                 result.getProduct().getProductId(),
                 result.getQuantity(),
+                result.getProduct().getPrice(),
                 totalPrice,
                 result.getStatus().toString()
         );
