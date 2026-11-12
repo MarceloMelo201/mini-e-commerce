@@ -11,6 +11,7 @@ public record OrderResponse(
 
         UUID orderId,
         UUID productId,
+        UUID reservationId,
         Integer quantity,
         BigDecimal unitPrice,
         BigDecimal totalPrice,

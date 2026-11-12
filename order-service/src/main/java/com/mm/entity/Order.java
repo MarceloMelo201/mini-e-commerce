@@ -25,6 +25,9 @@ public class Order {
     private UUID productId;
 
     @Column(nullable = false, updatable = false)
+    private UUID reservationId;
+
+    @Column(nullable = false, updatable = false)
     private Integer quantity;
 
     @Column(nullable = false, updatable = false, precision = 19, scale = 2)
