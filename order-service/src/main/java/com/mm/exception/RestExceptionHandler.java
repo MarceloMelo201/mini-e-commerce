@@ -1,5 +1,7 @@
 package com.mm.exception;
 
+import feign.FeignException;
+import feign.RetryableException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +9,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -16,13 +19,15 @@ import java.util.Objects;
 @RestControllerAdvice
 public class RestExceptionHandler {
 
-    @ExceptionHandler({InsufficientQuantityEx.class, OrderCannotBeConfirmedEx.class})
+    @ExceptionHandler({InsufficientQuantityEx.class, OrderCannotBeConfirmedEx.class, OrderCannotBeReleasedEx.class})
     public ResponseEntity<RestApiError> conflictHandler(Exception ex) {
+        log.warn("Conflict: {}", ex.getMessage());
         return build(HttpStatus.CONFLICT, ex.getMessage());
     }
 
-    @ExceptionHandler({ProductNotFoundEx.class, OrderNotFoundEx.class})
+    @ExceptionHandler({ProductNotFoundEx.class, OrderNotFoundEx.class, ReservationNotFoundEx.class})
     public ResponseEntity<RestApiError> notFoundHandler(Exception ex) {
+        log.warn("Not found: {}", ex.getMessage());
         return build(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 
@@ -37,6 +42,23 @@ public class RestExceptionHandler {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<RestApiError> malformedJsonHandler(HttpMessageNotReadableException ex) {
         return build(HttpStatus.BAD_REQUEST, "Malformed or unreadable request body.");
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<RestApiError> typeMismatchHandler(MethodArgumentTypeMismatchException ex) {
+        return build(HttpStatus.BAD_REQUEST, "Invalid value for parameter '" + ex.getName() + "'.");
+    }
+
+    @ExceptionHandler(RetryableException.class)
+    public ResponseEntity<RestApiError> serviceUnavailableHandler(RetryableException ex) {
+        log.error("Downstream service unavailable", ex);
+        return build(HttpStatus.SERVICE_UNAVAILABLE, "Dependent service is unavailable. Please try again later.");
+    }
+
+    @ExceptionHandler(FeignException.class)
+    public ResponseEntity<RestApiError> downstreamErrorHandler(FeignException ex) {
+        log.error("Downstream service error (status {})", ex.status(), ex);
+        return build(HttpStatus.BAD_GATEWAY, "Error communicating with a dependent service.");
     }
 
     @ExceptionHandler(Exception.class)
