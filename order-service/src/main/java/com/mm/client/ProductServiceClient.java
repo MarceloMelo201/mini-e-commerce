@@ -12,9 +12,9 @@ import java.util.UUID;
 @FeignClient(url = "http://localhost:8081", name = "product-service")
 public interface ProductServiceClient {
 
-    @PostMapping("/products/{productId}/reserve")
+    @PostMapping("/internal/products/{productId}/reserve")
     StockResponse createReserve(@PathVariable("productId") UUID productId, @RequestBody StockRequest request);
 
-    @PostMapping("/reservations/{reservationId}/release")
+    @PostMapping("/internal/reservations/{reservationId}/release")
     void releaseReserve(@PathVariable("reservationId") UUID reservationId);
 }
