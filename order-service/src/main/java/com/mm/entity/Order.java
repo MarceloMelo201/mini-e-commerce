@@ -18,8 +18,10 @@ import java.util.UUID;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID orderId;
+
+    @Version
+    private Long version;
 
     @Column(nullable = false, updatable = false)
     private UUID productId;
