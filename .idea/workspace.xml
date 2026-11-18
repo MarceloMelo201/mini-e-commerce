@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd839b70-b347-4139-bd97-b12ceadeeb94" name="Changes" comment="feat: criação do OrderController">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mm/controller/InternalRouteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mm/service/OrderServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/mm/service/ProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/mm/service/ReservationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mini-e-commerce.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ProductService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/55719/OneDrive/Documentos/Projetos/mini-e-commerce" value="3L4H38BKQzHJZsn7dTz03cgKoyG" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Docker Compose" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Exception" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarceloMelo201&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MarceloMelo201/mini-e-commerce.git&quot;,
+    &quot;accountId&quot;: &quot;337b5e70-96cf-4407-b509-9dd33f274883&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000012252" />
+      <entry key="MS500" value="1.0041461844099602" />
+      <entry key="S2" value="1.2537535656917054" />
+      <entry key="S5" value="1.5777831355717704" />
+      <entry key="S10" value="1.760122663675253" />
+      <entry key="S30" value="1.9256135744012641" />
+      <entry key="S60" value="2.0694614877416218" />
+      <entry key="M2" value="2.3289207318744882" />
+      <entry key="M5" value="2.836227170965226" />
+      <entry key="M10" value="3.627274384193184" />
+      <entry key="M15" value="5.037120691253972" />
+      <entry key="M30" value="16.702162124892425" />
+      <entry key="H1" value="53.58005884066118" />
+      <entry key="H2" value="116.76588315602119" />
+      <entry key="H4" value="214.4422542414338" />
+      <entry key="D1" value="746.2756029829656" />
+      <entry key="W1" value="1070.5207041499177" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.5093701282221664E-112" />
+      <entry key="S2" value="1.1084061777256128E-28" />
+      <entry key="S5" value="6.574755015783058E-12" />
+      <entry key="S10" value="2.564128509997707E-6" />
+      <entry key="S30" value="0.01368715742878441" />
+      <entry key="S60" value="0.11699212549914273" />
+      <entry key="M2" value="0.3420417390029033" />
+      <entry key="M5" value="0.6586541582730423" />
+      <entry key="M10" value="1.0089703148377172" />
+      <entry key="M15" value="1.7257045537659934" />
+      <entry key="M30" value="7.400731614888195" />
+      <entry key="H1" value="23.74806309983677" />
+      <entry key="H2" value="54.91419590689928" />
+      <entry key="H4" value="115.10968577070079" />
+      <entry key="D1" value="457.3092709934245" />
+      <entry key="W1" value="660.5058063013005" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.8950250709289678" />
+      <entry key="MS500" value="0.9820407593839199" />
+      <entry key="S2" value="1.2455990740491043" />
+      <entry key="S5" value="1.5731695800300458" />
+      <entry key="S10" value="1.7574374341712078" />
+      <entry key="S30" value="1.9375326938411486" />
+      <entry key="S60" value="2.1825776702790094" />
+      <entry key="M2" value="2.6657215927578473" />
+      <entry key="M5" value="3.490900276822741" />
+      <entry key="M10" value="4.633188073133251" />
+      <entry key="M15" value="6.759009232503657" />
+      <entry key="M30" value="24.092680782673078" />
+      <entry key="H1" value="77.31072112164269" />
+      <entry key="H2" value="171.6606040179466" />
+      <entry key="H4" value="329.53294987154885" />
+      <entry key="D1" value="1203.5733915108385" />
+      <entry key="W1" value="1731.0241683548163" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3L3zFsoNILroI5aKbk5MCNkg21Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="ensembleEnabled" value="false" />
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yaml.postgres-products: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "JUnit.OrderServiceTest.executor": "Run",
+    "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.ReservationServiceTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "main",
+    "ignore_missing_gitignore": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/55719/OneDrive/Documentos/Projetos/mini-e-commerce/order-service/src/main/java/exception",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\55719\OneDrive\Documentos\Projetos\mini-e-commerce\order-service\src\main\java\exception" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mm.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exception" />
+      <recent name="com.mm.dtos" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="ApiGatewayApplication" value="STOPPED" />
+              <entry key="OrderServiceApplication" value="STOPPED" />
+              <entry key="ProductServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mm.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mm.service.ProductServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mm.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mm.service.ReservationServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mm.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mm.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mm.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.postgres-products: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres-products" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ReservationServiceTest" />
+        <item itemvalue="JUnit.ProductServiceTest" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.postgres-products: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-ac68fc9d2b05-intellij.indexing.shared.core-IU-263.7307.200" />
+        <option value="bundled-js-predefined-d6986cc7102b-56aff7b04f6f-JavaScript-IU-263.7307.200" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd839b70-b347-4139-bd97-b12ceadeeb94" name="Changes" comment="" />
+      <created>1792697440394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792697440394</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commit inicial">
+      <option name="closed" value="true" />
+      <created>1792697769981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792697769981</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: criacao entidade Product">
+      <option name="closed" value="true" />
+      <created>1792698889255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792698889255</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: criacao do repositorio entidade Product">
+      <option name="closed" value="true" />
+      <created>1792707746041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1792707746041</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: criacao dos dtos da entidade product">
+      <option name="closed" value="true" />
+      <created>1792707760739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1792707760739</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: criacao da entidade StockReservation">
+      <option name="closed" value="true" />
+      <created>1792708298923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1792708298923</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: alteração no ProductRepository">
+      <option name="closed" value="true" />
+      <created>1793125187291</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125187291</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: criação do ReservationStatus e mudança no StockReservation">
+      <option name="closed" value="true" />
+      <created>1793125209147</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125209147</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: criação do StockRepository">
+      <option name="closed" value="true" />
+      <created>1793125220877</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125220877</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: criação do ProductMapper">
+      <option name="closed" value="true" />
+      <created>1793125233793</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125233793</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: criação dos dtos da classe StockReservation">
+      <option name="closed" value="true" />
+      <created>1793125273139</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125273139</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: criação das exceções personalizadas">
+      <option name="closed" value="true" />
+      <created>1793125298202</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125298202</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: criação do ProductService">
+      <option name="closed" value="true" />
+      <created>1793125315658</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125315658</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: criação do RestExceptionHandler">
+      <option name="closed" value="true" />
+      <created>1793125909246</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1793125909246</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: alteração no ProductService">
+      <option name="closed" value="true" />
+      <created>1793212657829</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1793212657829</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: criação do ReservationService">
+      <option name="closed" value="true" />
+      <created>1793212679451</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1793212679451</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: criação do ProductController">
+      <option name="closed" value="true" />
+      <created>1793212721843</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1793212721843</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: criação do ReservationController">
+      <option name="closed" value="true" />
+      <created>1793212728986</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1793212728986</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: criação do order-service">
+      <option name="closed" value="true" />
+      <created>1793220970886</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1793220970886</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: criação da entidade Order">
+      <option name="closed" value="true" />
+      <created>1793220989507</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1793220989507</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: alteração no StockResponse e ReservationService">
+      <option name="closed" value="true" />
+      <created>1793221298776</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1793221298777</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: alteração na entidade Product">
+      <option name="closed" value="true" />
+      <created>1793221311726</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1793221311726</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: criação do enum OrderStatus">
+      <option name="closed" value="true" />
+      <created>1793322756306</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1793322756306</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: criação dos dtos da entidade Order">
+      <option name="closed" value="true" />
+      <created>1793322771995</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1793322771995</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: criação do repositorio da entidade Order">
+      <option name="closed" value="true" />
+      <created>1793322780599</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1793322780599</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: criação dos dtos de stock">
+      <option name="closed" value="true" />
+      <created>1794429433494</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1794429433494</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: alteração no OrderResponse">
+      <option name="closed" value="true" />
+      <created>1794429459714</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1794429459714</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat: criação das exceções personalizadas e controller advice">
+      <option name="closed" value="true" />
+      <created>1794429551919</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1794429551919</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat: adição de response status nas exceções">
+      <option name="closed" value="true" />
+      <created>1794444811393</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1794444811393</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: adição de response status nas exceções e mudança no global handler">
+      <option name="closed" value="true" />
+      <created>1794444862274</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1794444862274</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: criação do ProductServiceClient">
+      <option name="closed" value="true" />
+      <created>1794444888903</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1794444888903</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: habilitando o client feign">
+      <option name="closed" value="true" />
+      <created>1794444908838</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1794444908838</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: adição do reservationId na entidade Order">
+      <option name="closed" value="true" />
+      <created>1794444950165</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1794444950165</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: criação do OrderMapper">
+      <option name="closed" value="true" />
+      <created>1794444987362</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1794444987362</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: alteração na entidade Order">
+      <option name="closed" value="true" />
+      <created>1794944452300</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1794944452300</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: alteração no ProductServiceClient">
+      <option name="closed" value="true" />
+      <created>1794944474673</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1794944474673</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: criação do OrderService">
+      <option name="closed" value="true" />
+      <created>1794944485569</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1794944485569</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat: criação do OrderController">
+      <option name="closed" value="true" />
+      <created>1794944507946</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1794944507946</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: alteração no ProductService" />
+    <MESSAGE value="feat: criação do ReservationService" />
+    <MESSAGE value="feat: criação do ProductController" />
+    <MESSAGE value="feat: criação do ReservationController" />
+    <MESSAGE value="feat: criação do order-service" />
+    <MESSAGE value="feat: criação da entidade Order" />
+    <MESSAGE value="feat: alteração no StockResponse e ReservationService" />
+    <MESSAGE value="feat: alteração na entidade Product" />
+    <MESSAGE value="feat: criação do enum OrderStatus" />
+    <MESSAGE value="feat: criação dos dtos da entidade Order" />
+    <MESSAGE value="feat: criação do repositorio da entidade Order" />
+    <MESSAGE value="feat: criação dos dtos de stock" />
+    <MESSAGE value="feat: alteração no OrderResponse" />
+    <MESSAGE value="feat: criação das exceções personalizadas e controller advice" />
+    <MESSAGE value="feat:" />
+    <MESSAGE value="feat: adição de response status nas exceções" />
+    <MESSAGE value="feat: adição de response status nas exceções e mudança no global handler" />
+    <MESSAGE value="feat: criação do ProductServiceClient" />
+    <MESSAGE value="feat: habilitando o client feign" />
+    <MESSAGE value="feat: adição do reservationId na entidade Order" />
+    <MESSAGE value="feat: criação do OrderMapper" />
+    <MESSAGE value="feat: alteração na entidade Order" />
+    <MESSAGE value="feat: alteração no ProductServiceClient" />
+    <MESSAGE value="feat: criação do OrderService" />
+    <MESSAGE value="feat: criação do OrderController" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: criação do OrderController" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
