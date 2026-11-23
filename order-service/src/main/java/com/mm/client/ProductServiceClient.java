@@ -17,4 +17,7 @@ public interface ProductServiceClient {
 
     @PostMapping("/internal/reservations/{reservationId}/release")
     void releaseReserve(@PathVariable("reservationId") UUID reservationId);
+
+    @PostMapping("/internal/reservations/{reservationId}/confirm")
+    void confirmReservation(@PathVariable("reservationId") UUID reservationId);
 }
