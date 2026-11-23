@@ -14,7 +14,7 @@ public record ProductRequest(
 
         @NotNull(message = "The price cannot be null.")
         @Digits(integer = 10, fraction = 2, message = "Price must be a valid monetary amount.")
-        @Positive(message = "Price must be positive.")
+        @PositiveOrZero(message = "Price must be positive or zero.")
         BigDecimal price,
 
         @NotNull(message = "Available quantity cannot be null.")
