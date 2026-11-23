@@ -11,6 +11,7 @@ public record OrderRequest(
         UUID productId,
 
         @Min(value = 1, message = "The quantity cannot be negative or zero.")
+        @NotNull(message = "The quantity cannot be null.")
         Integer quantity
 
 ) {
