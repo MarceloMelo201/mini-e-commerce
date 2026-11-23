@@ -68,11 +68,21 @@ public class OrderService {
     public OrderResponse confirmOrder(UUID orderId) {
         Order result = repository.findById(orderId).orElseThrow(() -> new OrderNotFoundEx(orderId.toString()));
 
-        if(!result.getOrderStatus().equals(OrderStatus.PENDING))
+        if (!result.getOrderStatus().equals(OrderStatus.PENDING))
             throw new OrderCannotBeConfirmedEx(orderId.toString());
 
+        confirmReservation(result.getReservationId());
         result.setOrderStatus(OrderStatus.CONFIRMED);
         return mapper.toOrderResponse(result);
+    }
+
+    private void confirmReservation(UUID reservationId) {
+        try {
+            client.confirmReservation(reservationId);
+
+        } catch (FeignException.NotFound e) {
+            throw new ReservationNotFoundEx(reservationId.toString());
+        }
     }
 
 
@@ -81,14 +91,15 @@ public class OrderService {
         return repository
                 .findById(orderId)
                 .map(mapper::toOrderResponse)
-                .orElseThrow(()-> new OrderNotFoundEx(orderId.toString()));
+                .orElseThrow(() -> new OrderNotFoundEx(orderId.toString()));
     }
+
 
     @Transactional
     public OrderResponse releaseOrder(UUID orderId) {
         Order result = repository.findById(orderId).orElseThrow(() -> new OrderNotFoundEx(orderId.toString()));
 
-        if(!result.getOrderStatus().equals(OrderStatus.PENDING))
+        if (!result.getOrderStatus().equals(OrderStatus.PENDING))
             throw new OrderCannotBeReleasedEx(orderId.toString());
 
         result.setOrderStatus(OrderStatus.RELEASED);
