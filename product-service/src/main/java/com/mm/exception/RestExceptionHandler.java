@@ -16,7 +16,7 @@ import java.util.Objects;
 @RestControllerAdvice
 public class RestExceptionHandler {
 
-    @ExceptionHandler({ProductAlreadyExistsEx.class, InsufficientQuantityEx.class})
+    @ExceptionHandler({ProductAlreadyExistsEx.class, InsufficientQuantityEx.class, ReserveAlreadyExistsEx.class})
     public ResponseEntity<RestApiError> conflictHandler(Exception ex) {
         return build(HttpStatus.CONFLICT, ex.getMessage());
     }
