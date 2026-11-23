@@ -17,4 +17,5 @@ public interface StockRepository extends JpaRepository<StockReservation, UUID> {
             ReservationStatus status
     );
 
+    boolean existsByOrderId(UUID orderId);
 }

@@ -4,29 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd839b70-b347-4139-bd97-b12ceadeeb94" name="Changes" comment="feat: criação do OrderController">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mm/controller/InternalRouteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mm/service/OrderServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/mm/service/ProductServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/mm/service/ReservationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mini-e-commerce.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ProductService.java" afterDir="false" />
+    <list default="true" id="dd839b70-b347-4139-bd97-b12ceadeeb94" name="Changes" comment="feat: criação de testes unitarios da camada service">
+      <change afterPath="$PROJECT_DIR$/order-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/exception/ReserveAlreadyExistsEx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mm/client/ProductServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mm/client/ProductServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mm/dtos/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mm/dtos/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mm/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mm/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/dtos/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/dtos/ProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/entity/StockReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/entity/StockReservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/exception/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/exception/RestExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/repository/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/repository/StockRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +38,9 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Record" />
-        <option value="Exception" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -79,61 +72,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000012252" />
-      <entry key="MS500" value="1.0041461844099602" />
-      <entry key="S2" value="1.2537535656917054" />
-      <entry key="S5" value="1.5777831355717704" />
-      <entry key="S10" value="1.760122663675253" />
-      <entry key="S30" value="1.9256135744012641" />
-      <entry key="S60" value="2.0694614877416218" />
-      <entry key="M2" value="2.3289207318744882" />
-      <entry key="M5" value="2.836227170965226" />
-      <entry key="M10" value="3.627274384193184" />
-      <entry key="M15" value="5.037120691253972" />
-      <entry key="M30" value="16.702162124892425" />
-      <entry key="H1" value="53.58005884066118" />
-      <entry key="H2" value="116.76588315602119" />
-      <entry key="H4" value="214.4422542414338" />
-      <entry key="D1" value="746.2756029829656" />
-      <entry key="W1" value="1070.5207041499177" />
+      <entry key="MS100" value="1.145591698308557" />
+      <entry key="MS500" value="1.6801854262029776" />
+      <entry key="S2" value="1.9081484177215096" />
+      <entry key="S5" value="1.9621941945623091" />
+      <entry key="S10" value="1.9809149782536248" />
+      <entry key="S30" value="1.9935976893449818" />
+      <entry key="S60" value="1.998009626533345" />
+      <entry key="M2" value="2.0838977045711315" />
+      <entry key="M5" value="3.3981738474967322" />
+      <entry key="M10" value="8.309653651592118" />
+      <entry key="M15" value="14.555470173299538" />
+      <entry key="M30" value="29.586950076642474" />
+      <entry key="H1" value="48.3426499999313" />
+      <entry key="H2" value="87.71112102099772" />
+      <entry key="H4" value="175.23694877091887" />
+      <entry key="D1" value="738.5422990923252" />
+      <entry key="W1" value="1121.6006305278295" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5093701282221664E-112" />
-      <entry key="S2" value="1.1084061777256128E-28" />
-      <entry key="S5" value="6.574755015783058E-12" />
-      <entry key="S10" value="2.564128509997707E-6" />
-      <entry key="S30" value="0.01368715742878441" />
-      <entry key="S60" value="0.11699212549914273" />
-      <entry key="M2" value="0.3420417390029033" />
-      <entry key="M5" value="0.6586541582730423" />
-      <entry key="M10" value="1.0089703148377172" />
-      <entry key="M15" value="1.7257045537659934" />
-      <entry key="M30" value="7.400731614888195" />
-      <entry key="H1" value="23.74806309983677" />
-      <entry key="H2" value="54.91419590689928" />
-      <entry key="H4" value="115.10968577070079" />
-      <entry key="D1" value="457.3092709934245" />
-      <entry key="W1" value="660.5058063013005" />
+      <entry key="MS100" value="7.428840950212852E-12" />
+      <entry key="MS500" value="0.00594544289390374" />
+      <entry key="S2" value="0.2776809286088865" />
+      <entry key="S5" value="0.5989884127929123" />
+      <entry key="S10" value="0.773943417060956" />
+      <entry key="S30" value="0.918360326636756" />
+      <entry key="S60" value="0.9758130190402006" />
+      <entry key="M2" value="1.2155165728580604" />
+      <entry key="M5" value="2.7630238842543258" />
+      <entry key="M10" value="5.571601271167811" />
+      <entry key="M15" value="8.106146093160932" />
+      <entry key="M30" value="13.338054025586423" />
+      <entry key="H1" value="19.880771839478584" />
+      <entry key="H2" value="36.88538912731769" />
+      <entry key="H4" value="84.70063908064043" />
+      <entry key="D1" value="436.8861469153016" />
+      <entry key="W1" value="675.7376461575972" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8950250709289678" />
-      <entry key="MS500" value="0.9820407593839199" />
-      <entry key="S2" value="1.2455990740491043" />
-      <entry key="S5" value="1.5731695800300458" />
-      <entry key="S10" value="1.7574374341712078" />
-      <entry key="S30" value="1.9375326938411486" />
-      <entry key="S60" value="2.1825776702790094" />
-      <entry key="M2" value="2.6657215927578473" />
-      <entry key="M5" value="3.490900276822741" />
-      <entry key="M10" value="4.633188073133251" />
-      <entry key="M15" value="6.759009232503657" />
-      <entry key="M30" value="24.092680782673078" />
-      <entry key="H1" value="77.31072112164269" />
-      <entry key="H2" value="171.6606040179466" />
-      <entry key="H4" value="329.53294987154885" />
-      <entry key="D1" value="1203.5733915108385" />
-      <entry key="W1" value="1731.0241683548163" />
+      <entry key="MS100" value="0.7290053300255142" />
+      <entry key="MS500" value="1.378443006294143" />
+      <entry key="S2" value="1.9968574733106514" />
+      <entry key="S5" value="2.438209924957518" />
+      <entry key="S10" value="2.680038840858073" />
+      <entry key="S30" value="2.883269364936441" />
+      <entry key="S60" value="2.958375430698882" />
+      <entry key="M2" value="3.286756987385649" />
+      <entry key="M5" value="6.139178422144323" />
+      <entry key="M10" value="13.853046261149533" />
+      <entry key="M15" value="22.631725608940275" />
+      <entry key="M30" value="42.89811813263561" />
+      <entry key="H1" value="68.20311168201542" />
+      <entry key="H2" value="124.57957662530035" />
+      <entry key="H4" value="259.9211749074414" />
+      <entry key="D1" value="1175.4169717098396" />
+      <entry key="W1" value="1797.335806339878" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -199,8 +192,11 @@
     "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -241,7 +237,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
     <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="product-service" />
       <extension name="coverage">
@@ -271,6 +267,15 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
     </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
@@ -641,7 +646,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794944507946</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="feat: adição do serviço api gateway">
+      <option name="closed" value="true" />
+      <created>1794962027204</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1794962027204</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: criação de testes unitarios da camada service">
+      <option name="closed" value="true" />
+      <created>1794962061282</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1794962061282</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,8 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: alteração no ProductService" />
-    <MESSAGE value="feat: criação do ReservationService" />
     <MESSAGE value="feat: criação do ProductController" />
     <MESSAGE value="feat: criação do ReservationController" />
     <MESSAGE value="feat: criação do order-service" />
@@ -684,7 +703,9 @@
     <MESSAGE value="feat: alteração no ProductServiceClient" />
     <MESSAGE value="feat: criação do OrderService" />
     <MESSAGE value="feat: criação do OrderController" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: criação do OrderController" />
+    <MESSAGE value="feat: adição do serviço api gateway" />
+    <MESSAGE value="feat: criação de testes unitarios da camada service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: criação de testes unitarios da camada service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
