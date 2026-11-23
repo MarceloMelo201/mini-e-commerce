@@ -7,6 +7,7 @@ import com.mm.entity.StockReservation;
 import com.mm.enums.ReservationStatus;
 import com.mm.exception.InsufficientQuantityEx;
 import com.mm.exception.ProductNotFoundEx;
+import com.mm.exception.ReserveAlreadyExistsEx;
 import com.mm.exception.ReservationNotFoundEx;
 import com.mm.repository.ProductRepository;
 import com.mm.repository.StockRepository;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.UUID;
+import java.util.stream.Stream;
 
 @Service
 public class ReservationService {
@@ -30,8 +32,13 @@ public class ReservationService {
     public StockResponse createReserve(UUID productId, StockRequest request) {
         Product product = productRepository.findByProductIdForUpdate(productId).orElseThrow(ProductNotFoundEx::new);
 
-        int reservationQuantityStock = stockRepository.findAllByProduct_ProductIdAndStatus(productId, ReservationStatus.ACTIVE)
-                .stream()
+        if(stockRepository.existsByOrderId(request.orderId()))
+            throw new ReserveAlreadyExistsEx();
+
+        int reservationQuantityStock = Stream.concat(
+                stockRepository.findAllByProduct_ProductIdAndStatus(productId, ReservationStatus.ACTIVE).stream(),
+                stockRepository.findAllByProduct_ProductIdAndStatus(productId, ReservationStatus.CONFIRMED).stream()
+        )
                 .mapToInt(StockReservation::getQuantity)
                 .sum();
 
@@ -63,6 +70,18 @@ public class ReservationService {
     @Transactional
     public void releaseReservation(UUID reservationId) {
         StockReservation reservation = stockRepository.findById(reservationId).orElseThrow(ReservationNotFoundEx::new);
-        stockRepository.save(reservation.setStatus(ReservationStatus.RELEASED));
+        
+        if(reservation.getStatus().equals(ReservationStatus.ACTIVE))
+            stockRepository.save(reservation.setStatus(ReservationStatus.RELEASED));
     }
+
+    @Transactional
+    public void confirmReservation(UUID reservationId) {
+        StockReservation reservation = stockRepository.findById(reservationId).orElseThrow(ReservationNotFoundEx::new);
+
+        if(reservation.getStatus().equals(ReservationStatus.ACTIVE))
+            stockRepository.save(reservation.setStatus(ReservationStatus.CONFIRMED));
+    }
+
+
 }
