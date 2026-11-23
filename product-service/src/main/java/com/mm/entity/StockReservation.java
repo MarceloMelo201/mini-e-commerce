@@ -18,7 +18,7 @@ public class StockReservation {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID reservationId;
 
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false, unique = true)
     private UUID orderId;
 
     @JoinColumn(nullable = false, updatable = false)
