@@ -30,4 +30,10 @@ public class ReservationController {
         reservationService.releaseReservation(reservationId);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
+
+    @PostMapping("/reservations/{reservationId}/confirm")
+    public ResponseEntity<?> confirmReservation(@PathVariable UUID reservationId) {
+        reservationService.confirmReservation(reservationId);
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
 }
