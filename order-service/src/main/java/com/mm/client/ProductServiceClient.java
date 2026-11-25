@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.UUID;
 
-@FeignClient(url = "http://localhost:8081", name = "product-service")
+@FeignClient(url = "http://product-service:8081", name = "product-service")
 public interface ProductServiceClient {
 
     @PostMapping("/internal/products/{productId}/reserve")

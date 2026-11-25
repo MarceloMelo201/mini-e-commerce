@@ -1,6 +1,7 @@
 package com.mm.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Digits;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -28,6 +29,7 @@ public class Product {
     private String description;
 
     @Column(nullable = false, precision = 10, scale = 2)
+    @Digits(integer = 8, fraction = 2)
     private BigDecimal price;
 
     @Column(nullable = false)

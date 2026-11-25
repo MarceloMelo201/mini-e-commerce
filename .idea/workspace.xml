@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd839b70-b347-4139-bd97-b12ceadeeb94" name="Changes" comment="feat: criação de testes unitarios da camada service">
-      <change afterPath="$PROJECT_DIR$/order-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/exception/ReserveAlreadyExistsEx.java" afterDir="false" />
+    <list default="true" id="dd839b70-b347-4139-bd97-b12ceadeeb94" name="Changes" comment="feat: adição da anotação Unique no StockReservation">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mm/client/ProductServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mm/client/ProductServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mm/dtos/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mm/dtos/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mm/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mm/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/dtos/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/dtos/ProductRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/entity/StockReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/entity/StockReservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/exception/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/exception/RestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/repository/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/repository/StockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mm/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mm/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,8 @@
         <option value="JUnit5 Test Class" />
         <option value="Class" />
         <option value="Exception" />
+        <option value="README" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -72,61 +71,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.145591698308557" />
-      <entry key="MS500" value="1.6801854262029776" />
-      <entry key="S2" value="1.9081484177215096" />
-      <entry key="S5" value="1.9621941945623091" />
-      <entry key="S10" value="1.9809149782536248" />
-      <entry key="S30" value="1.9935976893449818" />
-      <entry key="S60" value="1.998009626533345" />
-      <entry key="M2" value="2.0838977045711315" />
-      <entry key="M5" value="3.3981738474967322" />
-      <entry key="M10" value="8.309653651592118" />
-      <entry key="M15" value="14.555470173299538" />
-      <entry key="M30" value="29.586950076642474" />
-      <entry key="H1" value="48.3426499999313" />
-      <entry key="H2" value="87.71112102099772" />
-      <entry key="H4" value="175.23694877091887" />
-      <entry key="D1" value="738.5422990923252" />
-      <entry key="W1" value="1121.6006305278295" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000864714205" />
+      <entry key="S2" value="1.029592358054318" />
+      <entry key="S5" value="1.6157667064467665" />
+      <entry key="S10" value="3.327235141223227" />
+      <entry key="S30" value="10.089635497382888" />
+      <entry key="S60" value="19.229373836093227" />
+      <entry key="M2" value="33.11221810468787" />
+      <entry key="M5" value="53.07355412031074" />
+      <entry key="M10" value="66.63530785865144" />
+      <entry key="M15" value="75.62200812899239" />
+      <entry key="M30" value="94.35106914584887" />
+      <entry key="H1" value="116.5100576499157" />
+      <entry key="H2" value="157.5579164968289" />
+      <entry key="H4" value="245.6502801775257" />
+      <entry key="D1" value="811.2135081611955" />
+      <entry key="W1" value="1197.6675250177268" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="7.428840950212852E-12" />
-      <entry key="MS500" value="0.00594544289390374" />
-      <entry key="S2" value="0.2776809286088865" />
-      <entry key="S5" value="0.5989884127929123" />
-      <entry key="S10" value="0.773943417060956" />
-      <entry key="S30" value="0.918360326636756" />
-      <entry key="S60" value="0.9758130190402006" />
-      <entry key="M2" value="1.2155165728580604" />
-      <entry key="M5" value="2.7630238842543258" />
-      <entry key="M10" value="5.571601271167811" />
-      <entry key="M15" value="8.106146093160932" />
-      <entry key="M30" value="13.338054025586423" />
-      <entry key="H1" value="19.880771839478584" />
-      <entry key="H2" value="36.88538912731769" />
-      <entry key="H4" value="84.70063908064043" />
-      <entry key="D1" value="436.8861469153016" />
-      <entry key="W1" value="675.7376461575972" />
+      <entry key="MS100" value="2.8572100813490915E-75" />
+      <entry key="MS500" value="1.2481229037350015E-15" />
+      <entry key="S2" value="2.724317263646315E-4" />
+      <entry key="S5" value="0.06750153521779265" />
+      <entry key="S10" value="0.4691451623590037" />
+      <entry key="S30" value="2.265931802476486" />
+      <entry key="S60" value="4.12444247245053" />
+      <entry key="M2" value="6.2414391654959065" />
+      <entry key="M5" value="9.064942866931892" />
+      <entry key="M10" value="12.082846952313279" />
+      <entry key="M15" value="14.739998079056088" />
+      <entry key="M30" value="20.64682472569175" />
+      <entry key="H1" value="28.08073279675525" />
+      <entry key="H2" value="45.311230155498684" />
+      <entry key="H4" value="92.77739835888151" />
+      <entry key="D1" value="445.38119884105686" />
+      <entry key="W1" value="686.1836198238317" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7290053300255142" />
-      <entry key="MS500" value="1.378443006294143" />
-      <entry key="S2" value="1.9968574733106514" />
-      <entry key="S5" value="2.438209924957518" />
-      <entry key="S10" value="2.680038840858073" />
-      <entry key="S30" value="2.883269364936441" />
-      <entry key="S60" value="2.958375430698882" />
-      <entry key="M2" value="3.286756987385649" />
-      <entry key="M5" value="6.139178422144323" />
-      <entry key="M10" value="13.853046261149533" />
-      <entry key="M15" value="22.631725608940275" />
-      <entry key="M30" value="42.89811813263561" />
-      <entry key="H1" value="68.20311168201542" />
-      <entry key="H2" value="124.57957662530035" />
-      <entry key="H4" value="259.9211749074414" />
-      <entry key="D1" value="1175.4169717098396" />
-      <entry key="W1" value="1797.335806339878" />
+      <entry key="MS100" value="0.9330329915368074" />
+      <entry key="MS500" value="0.986232789682732" />
+      <entry key="S2" value="1.02600026595533" />
+      <entry key="S5" value="1.6672958802112672" />
+      <entry key="S10" value="3.748056544053141" />
+      <entry key="S30" value="12.282872874075355" />
+      <entry key="S60" value="23.286955328256223" />
+      <entry key="M2" value="39.300004831361136" />
+      <entry key="M5" value="62.102500715156516" />
+      <entry key="M10" value="78.68715760122282" />
+      <entry key="M15" value="90.33161068943997" />
+      <entry key="M30" value="114.9704997723705" />
+      <entry key="H1" value="144.56949733108962" />
+      <entry key="H2" value="202.8515147251811" />
+      <entry key="H4" value="338.4109014753333" />
+      <entry key="D1" value="1256.5831441666157" />
+      <entry key="W1" value="1883.8486544843402" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -158,53 +157,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yaml.postgres-products: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
-    "JUnit.OrderServiceTest.executor": "Run",
-    "JUnit.ProductServiceTest.executor": "Run",
-    "JUnit.ReservationServiceTest.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "main",
-    "ignore_missing_gitignore": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/55719/OneDrive/Documentos/Projetos/mini-e-commerce/order-service/src/main/java/exception",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.api-gateway/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.postgres-products: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReservationServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/55719/OneDrive/Documentos/Projetos/mini-e-commerce/order-service/src/main/java/exception&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\55719\OneDrive\Documentos\Projetos\mini-e-commerce\order-service\src\main\java\exception" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\55719\OneDrive\Documentos\Projetos\mini-e-commerce\docs\image" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.mm.service" />
@@ -230,14 +233,14 @@
             <map>
               <entry key="ApiGatewayApplication" value="STOPPED" />
               <entry key="OrderServiceApplication" value="STOPPED" />
-              <entry key="ProductServiceApplication" value="STOPPED" />
+              <entry key="ProductServiceApplication" value="FAILED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
     <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="product-service" />
       <extension name="coverage">
@@ -304,6 +307,20 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="api-gateway/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="api-gateway/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -327,9 +344,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.api-gateway/Dockerfile" />
         <item itemvalue="JUnit.ReservationServiceTest" />
         <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml.postgres-products: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -662,7 +680,79 @@
       <option name="project" value="LOCAL" />
       <updated>1794962061282</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="feat: adição de anotação NotNull no OrderRequest">
+      <option name="closed" value="true" />
+      <created>1795473677332</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473677332</updated>
+    </task>
+    <task id="LOCAL-00041" summary="feat: adição de anotação PositiveOrZero no ProductRequest">
+      <option name="closed" value="true" />
+      <created>1795473708407</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473708407</updated>
+    </task>
+    <task id="LOCAL-00042" summary="feat: criação da exceção personalizada ReserveAlreadyExistsEx">
+      <option name="closed" value="true" />
+      <created>1795473732380</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473732380</updated>
+    </task>
+    <task id="LOCAL-00043" summary="feat: adição da função existsByOrderId no StockRepository">
+      <option name="closed" value="true" />
+      <created>1795473785573</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473785573</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feat: adição da função confirmReservation no ProductServiceClient">
+      <option name="closed" value="true" />
+      <created>1795473806203</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473806203</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat: adição da função confirmReservation e mudança na createReserve no ReservationService">
+      <option name="closed" value="true" />
+      <created>1795473833989</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473833989</updated>
+    </task>
+    <task id="LOCAL-00046" summary="feat: adição da função confirmReservation no ReservationController">
+      <option name="closed" value="true" />
+      <created>1795473845097</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473845097</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat: adição da função confirmReservation no OrderService">
+      <option name="closed" value="true" />
+      <created>1795473876502</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473876502</updated>
+    </task>
+    <task id="LOCAL-00048" summary="feat: adição da anotação Unique no StockReservation">
+      <option name="closed" value="true" />
+      <created>1795473892827</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1795473892827</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,15 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: criação do ProductController" />
-    <MESSAGE value="feat: criação do ReservationController" />
-    <MESSAGE value="feat: criação do order-service" />
-    <MESSAGE value="feat: criação da entidade Order" />
-    <MESSAGE value="feat: alteração no StockResponse e ReservationService" />
-    <MESSAGE value="feat: alteração na entidade Product" />
-    <MESSAGE value="feat: criação do enum OrderStatus" />
-    <MESSAGE value="feat: criação dos dtos da entidade Order" />
-    <MESSAGE value="feat: criação do repositorio da entidade Order" />
     <MESSAGE value="feat: criação dos dtos de stock" />
     <MESSAGE value="feat: alteração no OrderResponse" />
     <MESSAGE value="feat: criação das exceções personalizadas e controller advice" />
@@ -705,7 +786,16 @@
     <MESSAGE value="feat: criação do OrderController" />
     <MESSAGE value="feat: adição do serviço api gateway" />
     <MESSAGE value="feat: criação de testes unitarios da camada service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: criação de testes unitarios da camada service" />
+    <MESSAGE value="feat: adição de anotação NotNull no OrderRequest" />
+    <MESSAGE value="feat: adição de anotação PositiveOrZero no ProductRequest" />
+    <MESSAGE value="feat: criação da exceção personalizada ReserveAlreadyExistsEx" />
+    <MESSAGE value="feat: adição da função existsByOrderId no StockRepository" />
+    <MESSAGE value="feat: adição da função confirmReservation no ProductServiceClient" />
+    <MESSAGE value="feat: adição da função confirmReservation e mudança na createReserve no ReservationService" />
+    <MESSAGE value="feat: adição da função confirmReservation no ReservationController" />
+    <MESSAGE value="feat: adição da função confirmReservation no OrderService" />
+    <MESSAGE value="feat: adição da anotação Unique no StockReservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adição da anotação Unique no StockReservation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
